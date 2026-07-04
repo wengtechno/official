@@ -46,6 +46,68 @@ document.querySelectorAll(".lazy-embed").forEach((container) => {
   });
 });
 
+function createProofCard(card) {
+  const article = document.createElement("article");
+  article.className = "proof-card";
+
+  const imageFrame = document.createElement("div");
+  imageFrame.className = "proof-card-image";
+
+  const image = document.createElement("img");
+  image.src = card.image;
+  image.alt = card.title;
+  image.loading = "lazy";
+
+  const content = document.createElement("div");
+  content.className = "proof-card-content";
+
+  const label = document.createElement("p");
+  label.className = "card-label";
+  label.textContent = card.date;
+
+  const title = document.createElement("h3");
+  title.textContent = card.title;
+
+  const description = document.createElement("p");
+  description.textContent = card.description;
+
+  imageFrame.append(image);
+  content.append(label, title, description);
+  article.append(imageFrame, content);
+
+  return article;
+}
+
+async function loadProofCards(carousel) {
+  const source = carousel.dataset.cardsSrc;
+
+  if (!source) {
+    return;
+  }
+
+  try {
+    const response = await fetch(source);
+
+    if (!response.ok) {
+      throw new Error(`Unable to load ${source}`);
+    }
+
+    const cards = await response.json();
+    const validCards = cards.filter((card) => card.title && card.description && card.image);
+
+    carousel.replaceChildren(...validCards.map(createProofCard));
+  } catch (error) {
+    const status = carousel.querySelector(".carousel-status") || document.createElement("p");
+    status.className = "carousel-status";
+    status.textContent = "Add valid cards in data/live-press-cards.json.";
+    carousel.replaceChildren(status);
+  }
+}
+
+document.querySelectorAll("[data-cards-src]").forEach((carousel) => {
+  loadProofCards(carousel);
+});
+
 document.querySelectorAll("[data-track]").forEach((element) => {
   element.addEventListener("click", () => {
     window.dispatchEvent(
