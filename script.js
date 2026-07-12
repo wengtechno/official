@@ -70,12 +70,15 @@ async function loadProofCards(carousel) {
     }
     const cards = await response.json()
     const validCards = cards.filter((card) => card.title && card.image)
+    if (!validCards.length) {
+      throw new Error(`No valid cards found in ${source}`)
+    }
     carousel.replaceChildren(...validCards.map(createProofCard))
   } catch (error) {
     const status =
       carousel.querySelector(".carousel-status") || document.createElement("p")
     status.className = "carousel-status"
-    status.textContent = "Add valid cards in data/live-press-cards.json."
+    status.textContent = `Unable to load live cards from ${source}.`
     carousel.replaceChildren(status)
   }
 }
