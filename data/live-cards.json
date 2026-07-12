@@ -1,20 +1,12 @@
 [
   {
-    "date": "Jul 4, 2026",
-    "title": "Selected Bookings",
-    "description": "Add confirmed venues, festivals, and club appearances here as the live calendar grows.",
-    "image": "reference-image/20260608-banner.png"
+    "date": "July 4, 2026",
+    "title": "Overture Studio",
+    "image": "/reference-image/20260704-overture.png"
   },
   {
     "date": "Jun 25, 2026",
     "title": "Geary Avenue Warehouse",
-    "description": "Add interviews, premieres, mix features, and editorial coverage as they go live.",
-    "image": "reference-image/20260608-banner-youtube.png"
-  },
-  {
-    "date": "May 31, 2026",
-    "title": "Overture Studio",
-    "description": "A quiet proof point for the WENG world: paper texture, ink pressure, and restrained force.",
-    "image": "reference-image/20260608-profile.png"
+    "image": "/reference-image/20260625-geary.png"
   }
 ]
