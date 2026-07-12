@@ -2,11 +2,11 @@
   {
     "date": "July 4, 2026",
     "title": "Overture Studio",
-    "image": "/reference-image/20260704-overture.png"
+    "image": "./reference-image/20260704-overture.png"
   },
   {
     "date": "Jun 25, 2026",
     "title": "Geary Avenue Warehouse",
-    "image": "/reference-image/20260625-geary.png"
+    "image": "./reference-image/20260625-geary.png"
   }
 ]
