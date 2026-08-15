@@ -1,40 +1,3 @@
-// function createliveCard(card) {
-//   const article = document.createElement("article")
-//   article.className = "live-card"
-//   const imageFrame = document.createElement("div")
-//   imageFrame.className = "live-card-image"
-//   const image = document.createElement("img")
-//   image.src = card.image
-//   image.alt = card.alt || `Live set at ${card.title}`
-//   image.loading = "lazy"
-//   const content = document.createElement("div")
-//   content.className = "live-card-content"
-//   const title = document.createElement("h3")
-//   title.textContent = card.title
-//   const meta = document.createElement("div")
-//   meta.className = "live-card-meta"
-//   if (card.description) {
-//     const desc = document.createElement("p")
-//     desc.textContent = card.description
-//     content.append(desc)
-//   }
-//   if (card.location) {
-//     const location = document.createElement("p")
-//     location.className = "live-card-location"
-//     location.textContent = card.location
-//     meta.append(location)
-//   }
-//   if (card.date) {
-//     const date = document.createElement("p")
-//     date.className = "live-card-date"
-//     date.textContent = card.date
-//     meta.append(date)
-//   }
-//   imageFrame.append(image)
-//   content.append(title, meta)
-//   article.append(imageFrame, content)
-//   return article
-// }
 function createliveCard(card) {
   const article = document.createElement("article")
   article.className = "live-card"
@@ -154,6 +117,12 @@ function setupCarouselControls(carousel) {
     const atStart = carousel.scrollLeft <= 8
     const atEnd = carousel.scrollLeft >= maxScroll - 8
     const overflow = carousel.scrollWidth > carousel.clientWidth + 4
+    // Hide controls on narrow screens (mobile)
+    if (window.matchMedia("(max-width:560px)").matches) {
+      prev.style.display = "none"
+      next.style.display = "none"
+      return
+    }
     prev.style.display = overflow && !atStart ? "grid" : "none"
     next.style.display = overflow && !atEnd ? "grid" : "none"
   }

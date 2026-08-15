@@ -51,12 +51,8 @@
       </nav>
     </header>
 
-    <main id="main">
-      <section
-        id="about"
-        class="about content-section"
-        aria-labelledby="about-title"
-      >
+    <main>
+      <section id="about" class="content-section" aria-labelledby="about-title">
         <h2>01 — About</h2>
         <div class="about-grid">
           <figure class="portrait-frame">
@@ -69,7 +65,7 @@
             />
           </figure>
 
-          <div class="about-copy">
+          <div>
             <h1 id="about-title">WENG</h1>
             <p>is a schranz & hard techno artist based in Canada.</p>
             <p>
@@ -132,11 +128,11 @@
         </div>
       </section>
 
-      <section id="listen" class="listen content-section" aria-label="Music">
+      <section id="listen" class="content-section" aria-label="Music">
         <h2>02 — Music</h2>
         <div class="listen-grid">
-          <article class="feature-card">
-            <h3 class="card-label">Featured Set</h3>
+          <article>
+            <h3>Featured Set</h3>
             <div class="video-shell">
               <iframe
                 src="https://www.youtube.com/embed/Q3ZmSiKK0mc?si=HahpHnr_GxWDsTPm"
@@ -157,8 +153,8 @@
             </div>
           </article>
 
-          <article class="feature-card">
-            <h3 class="card-label">Latest Release</h3>
+          <article>
+            <h3>Latest Release</h3>
             <iframe
               data-testid="embed-iframe"
               style="border-radius: 12px"
@@ -180,7 +176,7 @@
         </div>
       </section>
 
-      <section id="live" class="live content-section" aria-label="Live">
+      <section id="live" class="content-section" aria-label="Live">
         <h2>03 — Live</h2>
         <div
           class="live-carousel"
@@ -188,34 +184,32 @@
           aria-label="Live cards"
           tabindex="0"
         >
-          <p class="carousel-status">Loading cards…</p>
+          <p>Loading cards…</p>
         </div>
       </section>
 
       <section
         id="booking"
-        class="booking content-section"
+        class="content-section"
         aria-labelledby="booking-title"
       >
         <h2>04 — Contact</h2>
-        <!-- <div class="booking-panel"> -->
-        <h4 id="booking-title">
+        <h4 class="booking-title">
           Booking & Collaboration:
           <a
             class="booking-email"
             href="mailto:weng.techno@proton.me"
             data-track="booking-email"
           >
-            <img src="icon/mail.png" alt="" class="social-icon" />
+            <img src="icon/mail.png" alt="" class="booking-email-icon" />
             weng.techno@proton.me
           </a>
         </h4>
-        <!-- </div> -->
       </section>
     </main>
 
     <footer class="site-footer">
-      <span class="footer-mark" aria-hidden="true">WENG｜翁</span>
+      <h1 class="footer-mark" aria-hidden="true">WENG｜翁</h1>
     </footer>
 
     <script src="script.js" defer></script>
