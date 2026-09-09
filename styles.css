@@ -102,6 +102,17 @@ a {
 .site-nav a:hover {
   opacity: 0.55;
 }
+.nav-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: clamp(2.25rem, 3vw, 3.25rem);
+}
+.nav-mark img {
+  display: block;
+  height: 100%;
+  width: auto;
+}
 .site-nav {
   font-family: "Cinzel Decorative", Georgia, serif;
   font-weight: 700;
