@@ -239,7 +239,37 @@ main a:hover {
 .listen-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: 1rem;
+}
+
+.listen-item {
+  display: grid;
+  width: 100%;
+  grid-template-columns: minmax(0, 5fr) minmax(5rem, 1fr);
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.download-button {
+  position: relative;
+  display: inline-flex;
+  justify-self: end;
+  align-items: center;
+  justify-content: center;
+  font-family: "Cinzel", Georgia, serif;
+  font-weight: 400;
+  color: var(--ink);
+  text-align: center;
+  transition: color 180ms ease;
+}
+
+.download-button:hover {
+  color: var(--ink);
+}
+
+.download-button:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
 }
 
 .video-shell {
@@ -359,6 +389,10 @@ main a:hover {
   gap: 0.4rem;
 }
 
+.booking-email:hover {
+  color: var(--ink);
+}
+
 .site-footer {
   display: flex;
   justify-content: center;
@@ -383,6 +417,9 @@ main a:hover {
   .listen-grid,
   .about-grid,
   .booking-panel {
+    grid-template-columns: 1fr;
+  }
+  .listen-item {
     grid-template-columns: 1fr;
   }
   .portrait-frame {
