@@ -54,7 +54,9 @@ async function loadliveCards(carousel) {
       throw new Error(`Unable to load ${source}`)
     }
     const cards = await response.json()
-    const validCards = cards.filter((card) => card.title && card.image)
+    const validCards = cards.filter(
+      (card) => card.display === true && card.title && card.image,
+    )
     if (!validCards.length) {
       throw new Error(`No valid cards found in ${source}`)
     }
@@ -103,7 +105,7 @@ function setupCarouselControls(carousel) {
   // Insert controls into wrapper (so they stay visible while carousel scrolls)
   wrapper.append(prev, next)
 
-  const scrollAmount = () => Math.max(carousel.clientWidth * 0.8, 280)
+  const scrollAmount = () => carousel.clientWidth
 
   prev.addEventListener("click", () => {
     carousel.scrollBy({ left: -scrollAmount(), behavior: "smooth" })
