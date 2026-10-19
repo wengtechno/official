@@ -1,27 +1,38 @@
 [
   {
+    "full-date": "Oct 16, 2026",
+    "date": "October, 2026",
+    "title": "Sidequest",
+    "image": "./reference-image/20261016-sidequest.jpg",
+    "location": "Pangea, Montreal",
+    "youtube": "https://youtu.be/M_8uuB16OnE?si=mBlrhRR_6kDfggZK",
+    "display": true
+  },
+  {
     "full-date": "Aug 29, 2026",
     "date": "August, 2026",
-    "title": "DJ Pop-Up",
+    "title": "FOM",
     "image": "./reference-image/20260829-idk.jpg",
     "location": "IDK Social Bar, Toronto",
-    "youtube": "https://youtu.be/2Aa23xuUlj8?si=z1USsHsx_DGOkmJJ"
+    "display": true
   },
   {
     "full-date": "Aug 8, 2026",
     "date": "August, 2026",
-    "title": " Closing for Doruksen",
+    "title": "System",
     "image": "./reference-image/20260808-comfort-zone.jpg",
     "location": "Comfort Zone, Toronto",
-    "youtube": "https://youtu.be/iYjLqr7QA-0?si=HPyilNg_c3Ka9P5p"
+    "youtube": "https://youtu.be/iYjLqr7QA-0?si=HPyilNg_c3Ka9P5p",
+    "display": true
   },
   {
     "full-date": "Aug 7, 2026",
     "date": "August, 2026",
     "title": "Montreal Music Week",
-    "image": "./reference-image/coming-soon.png",
+    "image": "./reference-image/20260807-mwm.png",
     "location": "btwn.us Studio, Montreal",
-    "youtube": "https://youtu.be/M49pLhAA0HI?si=0K43lQXfJ0upbq7y"
+    "youtube": "https://youtu.be/M49pLhAA0HI?si=0K43lQXfJ0upbq7y",
+    "display": true
   },
   {
     "full-date": "July 4, 2026",
@@ -29,13 +40,15 @@
     "title": "Open Deck",
     "location": "Overture Studio, Toronto",
     "image": "./reference-image/20260704-overture.jpg",
-    "youtube": "https://youtu.be/Q3ZmSiKK0mc?si=u56HswKwvxc4-ZWc"
+    "youtube": "https://youtu.be/Q3ZmSiKK0mc?si=u56HswKwvxc4-ZWc",
+    "display": true
   },
   {
     "full-date": "Jun 25, 2026",
     "date": "June, 2026",
     "title": "Open Deck",
     "location": "Geary Avenue Warehouse, Toronto",
-    "image": "./reference-image/20260625-geary.png"
+    "image": "./reference-image/20260625-geary.png",
+    "display": false
   }
 ]
